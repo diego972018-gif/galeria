@@ -5,41 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galería de Fondos</title>
 
+<!-- 🔥 Control de caché -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #111;
+    background: #0f0f0f;
     color: white;
     text-align: center;
 }
 
 h1 {
     padding: 20px;
+    font-size: 22px;
 }
 
 /* Galería */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 12px;
-    padding: 15px;
+    padding: 12px;
 }
 
 /* Tarjeta */
 .card {
-    background: #1b1b1b;
+    background: #1a1a1a;
     border-radius: 12px;
     overflow: hidden;
     padding-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 /* Imagen */
 .card img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
     display: block;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .card img:hover {
@@ -52,15 +61,16 @@ h1 {
     margin: 8px auto;
     width: 80%;
     padding: 8px;
-    background: #00c853;
+    background: linear-gradient(45deg, #00c853, #00e676);
     color: white;
     text-decoration: none;
     border-radius: 6px;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .boton:hover {
-    background: #00e676;
+    transform: scale(1.05);
 }
 </style>
 
@@ -72,67 +82,59 @@ h1 {
 
 <div class="galeria">
 
-    <!-- IMAGEN 1 -->
+    <!-- IMÁGENES PNG -->
+
     <div class="card">
-        <img src="fondos/fondo_1.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_1.jpg" download>Descargar</a>
+        <img src="fondos/fondo_1.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_1.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 2 -->
     <div class="card">
-        <img src="fondos/fondo_2.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_2.jpg" download>Descargar</a>
+        <img src="fondos/fondo_2.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_2.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 3 -->
     <div class="card">
-        <img src="fondos/fondo_3.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_3.jpg" download>Descargar</a>
+        <img src="fondos/fondo_3.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_3.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 4 -->
     <div class="card">
-        <img src="fondos/fondo_4.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_4.jpg" download>Descargar</a>
+        <img src="fondos/fondo_4.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_4.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 5 -->
     <div class="card">
-        <img src="fondos/fondo_5.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_5.jpg" download>Descargar</a>
+        <img src="fondos/fondo_5.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_5.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 6 -->
     <div class="card">
-        <img src="fondos/fondo_6.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_6.jpg" download>Descargar</a>
+        <img src="fondos/fondo_6.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_6.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 7 -->
     <div class="card">
-        <img src="fondos/fondo_7.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_7.jpg" download>Descargar</a>
+        <img src="fondos/fondo_7.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_7.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 8 -->
     <div class="card">
-        <img src="fondos/fondo_8.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_8.jpg" download>Descargar</a>
+        <img src="fondos/fondo_8.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_8.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 9 -->
     <div class="card">
-        <img src="fondos/fondo_9.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_9.jpg" download>Descargar</a>
+        <img src="fondos/fondo_9.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_9.png" download>Descargar</a>
     </div>
 
-    <!-- IMAGEN 10 -->
     <div class="card">
-        <img src="fondos/fondo_10.jpg" loading="lazy">
-        <a class="boton" href="fondos/fondo_10.jpg" download>Descargar</a>
+        <img src="fondos/fondo_10.png" loading="lazy">
+        <a class="boton" href="fondos/fondo_10.png" download>Descargar</a>
     </div>
 
 </div>
 
 </body>
-  </html>
+</html>
