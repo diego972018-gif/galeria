@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galería de Fondos</title>
 
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
 <style>
 body {
     margin: 0;
@@ -16,11 +12,6 @@ body {
     background: #0f0f0f;
     color: white;
     text-align: center;
-    user-select: none;
-}
-
-h1 {
-    padding: 20px;
 }
 
 .galeria {
@@ -30,12 +21,6 @@ h1 {
     padding: 12px;
 }
 
-.card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
 .card img {
     width: 100%;
     height: 220px;
@@ -43,7 +28,6 @@ h1 {
     cursor: pointer;
 }
 
-/* VISOR */
 #visor {
     position: fixed;
     top: 0;
@@ -62,29 +46,13 @@ h1 {
     max-height: 70%;
 }
 
-/* BOTÓN */
 .boton {
     margin-top: 20px;
     padding: 12px 20px;
     background: #00c853;
     border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
+    color: white;
 }
-
-/* FLECHAS */
-#scrollTop, #scrollBottom {
-    position: fixed;
-    right: 10px;
-    background: #00c853;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-#scrollTop { bottom: 70px; }
-#scrollBottom { bottom: 20px; }
 </style>
 </head>
 
@@ -93,43 +61,36 @@ h1 {
 <h1>Galería de Fondos</h1>
 
 <div class="galeria">
-
 <script>
 for (let i = 1; i <= 30; i++) {
     document.write(`
         <div class="card">
             <img src="fondos/fondo_${i}.jpg"
                  loading="lazy"
-                 draggable="false"
-                 oncontextmenu="return false"
                  onclick="abrirVisor(this.src)">
         </div>
     `);
 }
 </script>
-
 </div>
 
-<!-- VISOR -->
 <div id="visor" onclick="cerrarVisor(event)">
-    <img id="visorImg"
-         draggable="false"
-         oncontextmenu="return false"
-         onclick="event.stopPropagation()">
-
-    <div class="boton"
-         onclick="event.stopPropagation(); usarFondo()">
-        Usar como fondo
-    </div>
+    <img id="visorImg" onclick="event.stopPropagation()">
+    <div class="boton" onclick="event.stopPropagation(); usarFondo()">Usar como fondo</div>
 </div>
-
-<!-- FLECHAS -->
-<div id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️</div>
-<div id="scrollBottom" onclick="window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'})">⬇️</div>
 
 <script>
-
 let imagenActual = "";
+
+// 🔥 DETECTAR SI ES APP
+const esApp = navigator.userAgent.includes("LECTOSCAN_APP");
+
+// 🔥 SOLO BLOQUEAR EN NAVEGADOR
+if (!esApp) {
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("dragstart", e => e.preventDefault());
+    document.addEventListener("selectstart", e => e.preventDefault());
+}
 
 function abrirVisor(src) {
     imagenActual = src;
@@ -144,19 +105,8 @@ function cerrarVisor(e) {
 }
 
 function usarFondo() {
-    window.location.href = "app://setwallpaper?img=" + imagenActual;
+    window.location.href = "app://setwallpaper?img=" + encodeURIComponent(imagenActual);
 }
-
-// 🔒 BLOQUEOS
-document.addEventListener("contextmenu", e => e.preventDefault());
-document.addEventListener("dragstart", e => e.preventDefault());
-
-document.addEventListener("touchstart", function(e) {
-    if (e.target.tagName === "IMG") {
-        e.preventDefault();
-    }
-}, { passive: false });
-
 </script>
 
 </body>
