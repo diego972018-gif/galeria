@@ -1,101 +1,106 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galería de Fondos</title>
-
-<!-- Control de caché -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f0f0f;
-    color: white;
-    text-align: center;
+<script>
+function usarFondo(url) {
+    window.location.href = "app://setwallpaper?img=" + url;
 }
+</script>
 
-h1 {
-    padding: 20px;
-    font-size: 22px;
-}
-
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-    padding: 12px;
-}
-
-.card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    padding-bottom: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.card img:hover {
-    transform: scale(1.05);
-}
-
-.boton {
-    display: block;
-    margin: 8px auto;
-    width: 80%;
-    padding: 8px;
-    background: linear-gradient(45deg, #00c853, #00e676);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-}
-</style>
-</head>
-
-<body>
-
-<h1>Galería de Fondos</h1>
-
-<div class="galeria">
-
-<!-- IMÁGENES -->
-
-<div class="card"><img src="fondos/fondo_1.png" loading="lazy"><a class="boton" href="fondos/fondo_1.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_2.png" loading="lazy"><a class="boton" href="fondos/fondo_2.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_3.png" loading="lazy"><a class="boton" href="fondos/fondo_3.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_4.png" loading="lazy"><a class="boton" href="fondos/fondo_4.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_5.png" loading="lazy"><a class="boton" href="fondos/fondo_5.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_6.png" loading="lazy"><a class="boton" href="fondos/fondo_6.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_7.png" loading="lazy"><a class="boton" href="fondos/fondo_7.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_8.png" loading="lazy"><a class="boton" href="fondos/fondo_8.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_9.png" loading="lazy"><a class="boton" href="fondos/fondo_9.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_10.png" loading="lazy"><a class="boton" href="fondos/fondo_10.png">Descargar</a></div>
-
-<div class="card"><img src="fondos/fondo_11.png" loading="lazy"><a class="boton" href="fondos/fondo_11.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_12.png" loading="lazy"><a class="boton" href="fondos/fondo_12.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_13.png" loading="lazy"><a class="boton" href="fondos/fondo_13.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_14.png" loading="lazy"><a class="boton" href="fondos/fondo_14.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_15.png" loading="lazy"><a class="boton" href="fondos/fondo_15.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_16.png" loading="lazy"><a class="boton" href="fondos/fondo_16.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_17.png" loading="lazy"><a class="boton" href="fondos/fondo_17.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_18.png" loading="lazy"><a class="boton" href="fondos/fondo_18.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_19.png" loading="lazy"><a class="boton" href="fondos/fondo_19.png">Descargar</a></div>
-<div class="card"><img src="fondos/fondo_20.png" loading="lazy"><a class="boton" href="fondos/fondo_20.png">Descargar</a></div>
-
+<div class="card">
+<img src="fondos/fondo_1.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_1.png')">Usar fondo</button>
 </div>
 
-</body>
-                      </html>
+<div class="card">
+<img src="fondos/fondo_2.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_2.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_3.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_3.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_4.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_4.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_5.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_5.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_6.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_6.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_7.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_7.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_8.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_8.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_9.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_9.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_10.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_10.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_11.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_11.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_12.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_12.png')">Usar fondo</button>
+</div>
+
+<!-- 🔥 AQUÍ TU PRUEBA JPG -->
+<div class="card">
+<img src="fondos/fondo_13.jpg" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_13.jpg')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_14.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_14.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_15.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_15.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_16.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_16.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_17.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_17.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_18.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_18.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_19.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_19.png')">Usar fondo</button>
+</div>
+
+<div class="card">
+<img src="fondos/fondo_20.png" loading="lazy">
+<button class="boton" onclick="usarFondo('https://diego972018-gif.github.io/galeria/fondos/fondo_20.png')">Usar fondo</button>
+</div>
