@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galería</title>
 
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-
 <style>
 body {
     margin: 0;
@@ -31,8 +29,8 @@ h2 {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    cursor: pointer;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /* VISOR */
@@ -75,7 +73,11 @@ function abrirImagen(url) {
 }
 
 function usarFondo() {
-    window.location.href = "app://setwallpaper?img=" + imagenActual;
+    if (window.Android) {
+        Android.setWallpaper(imagenActual);
+    } else {
+        alert("Error de conexión con la app");
+    }
 }
 
 function cerrarVisor() {
@@ -91,7 +93,7 @@ function cerrarVisor() {
 
 <div class="galeria">
 
-<!-- 1 - 20 TODAS JPG -->
+<!-- TODAS JPG -->
 
 <img src="fondos/fondo_1.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_1.jpg')">
 <img src="fondos/fondo_2.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_2.jpg')">
