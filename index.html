@@ -16,7 +16,6 @@ body {
     background: #0f0f0f;
     color: white;
     text-align: center;
-    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -42,10 +41,9 @@ h1 {
     height: 220px;
     object-fit: cover;
     cursor: pointer;
-    pointer-events: auto;
 }
 
-/* 🔥 VISOR */
+/* VISOR */
 #visor {
     position: fixed;
     top: 0;
@@ -64,16 +62,29 @@ h1 {
     max-height: 70%;
 }
 
-/* 🔥 BOTÓN */
+/* BOTÓN */
 .boton {
     margin-top: 20px;
     padding: 12px 20px;
     background: #00c853;
     border-radius: 8px;
-    color: white;
     font-size: 16px;
     cursor: pointer;
 }
+
+/* FLECHAS */
+#scrollTop, #scrollBottom {
+    position: fixed;
+    right: 10px;
+    background: #00c853;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#scrollTop { bottom: 70px; }
+#scrollBottom { bottom: 20px; }
 </style>
 </head>
 
@@ -87,12 +98,11 @@ h1 {
 for (let i = 1; i <= 30; i++) {
     document.write(`
         <div class="card">
-            <img 
-                src="fondos/fondo_${i}.jpg"
-                loading="lazy"
-                draggable="false"
-                oncontextmenu="return false"
-                onclick="abrirVisor(this.src)">
+            <img src="fondos/fondo_${i}.jpg"
+                 loading="lazy"
+                 draggable="false"
+                 oncontextmenu="return false"
+                 onclick="abrirVisor(this.src)">
         </div>
     `);
 }
@@ -100,7 +110,7 @@ for (let i = 1; i <= 30; i++) {
 
 </div>
 
-<!-- 🔥 VISOR -->
+<!-- VISOR -->
 <div id="visor" onclick="cerrarVisor(event)">
     <img id="visorImg"
          draggable="false"
@@ -113,43 +123,39 @@ for (let i = 1; i <= 30; i++) {
     </div>
 </div>
 
+<!-- FLECHAS -->
+<div id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️</div>
+<div id="scrollBottom" onclick="window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'})">⬇️</div>
+
 <script>
 
 let imagenActual = "";
 
-// 🔥 ABRIR VISOR
 function abrirVisor(src) {
     imagenActual = src;
     document.getElementById("visor").style.display = "flex";
     document.getElementById("visorImg").src = src;
 }
 
-// 🔥 CERRAR VISOR SOLO SI TOCAN FONDO
 function cerrarVisor(e) {
     if (e.target.id === "visor") {
         document.getElementById("visor").style.display = "none";
     }
 }
 
-// 🔥 ENVIAR A APP
 function usarFondo() {
     window.location.href = "app://setwallpaper?img=" + imagenActual;
 }
 
-// 🔒 BLOQUEOS EXTRA
-
-// ❌ clic derecho global
+// 🔒 BLOQUEOS
 document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("dragstart", e => e.preventDefault());
 
-// ❌ mantener presionado en móvil
 document.addEventListener("touchstart", function(e) {
     if (e.target.tagName === "IMG") {
         e.preventDefault();
     }
 }, { passive: false });
-
-// ❌ arrastrar imágenes
-document.addEventListener("dragstart", e => e.preventDefault());
 
 </script>
 
