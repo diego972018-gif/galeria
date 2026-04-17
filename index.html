@@ -3,44 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galería</title>
+<title>Galería de Fondos</title>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 
 <style>
 body {
     margin: 0;
+    font-family: Arial;
     background: #0f0f0f;
     color: white;
-    font-family: Arial;
     text-align: center;
 }
 
-h2 {
-    margin: 20px 0;
+h1 {
+    padding: 20px;
 }
 
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 10px;
-    padding: 10px;
+    gap: 12px;
+    padding: 12px;
 }
 
-.galeria img {
+.card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
     cursor: pointer;
 }
 
-/* VISOR */
 #visor {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
+    background: rgba(0,0,0,0.95);
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -48,82 +56,70 @@ h2 {
 }
 
 #visor img {
-    max-width: 100%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 70%;
 }
 
 .boton {
     margin-top: 20px;
-    padding: 12px;
+    padding: 12px 20px;
     background: #00c853;
-    border: none;
-    color: white;
     border-radius: 8px;
+    color: white;
     font-size: 16px;
+    cursor: pointer;
 }
 </style>
-
-<script>
-let imagenActual = "";
-
-function abrirImagen(url) {
-    imagenActual = url;
-    document.getElementById("visorImg").src = url;
-    document.getElementById("visor").style.display = "flex";
-}
-
-function usarFondo() {
-    if (window.Android) {
-        Android.setWallpaper(imagenActual);
-    } else {
-        alert("Error de conexión con la app");
-    }
-}
-
-function cerrarVisor() {
-    document.getElementById("visor").style.display = "none";
-}
-</script>
-
 </head>
 
 <body>
 
-<h2>Galería de Fondos</h2>
+<h1>Galería de Fondos</h1>
 
 <div class="galeria">
 
-<!-- TODAS JPG -->
+<!-- 🔥 IMÁGENES HASTA 30 -->
 
-<img src="fondos/fondo_1.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_1.jpg')">
-<img src="fondos/fondo_2.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_2.jpg')">
-<img src="fondos/fondo_3.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_3.jpg')">
-<img src="fondos/fondo_4.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_4.jpg')">
-<img src="fondos/fondo_5.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_5.jpg')">
-<img src="fondos/fondo_6.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_6.jpg')">
-<img src="fondos/fondo_7.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_7.jpg')">
-<img src="fondos/fondo_8.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_8.jpg')">
-<img src="fondos/fondo_9.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_9.jpg')">
-<img src="fondos/fondo_10.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_10.jpg')">
-
-<img src="fondos/fondo_11.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_11.jpg')">
-<img src="fondos/fondo_12.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_12.jpg')">
-<img src="fondos/fondo_13.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_13.jpg')">
-<img src="fondos/fondo_14.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_14.jpg')">
-<img src="fondos/fondo_15.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_15.jpg')">
-<img src="fondos/fondo_16.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_16.jpg')">
-<img src="fondos/fondo_17.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_17.jpg')">
-<img src="fondos/fondo_18.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_18.jpg')">
-<img src="fondos/fondo_19.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_19.jpg')">
-<img src="fondos/fondo_20.jpg" onclick="abrirImagen('https://diego972018-gif.github.io/galeria/fondos/fondo_20.jpg')">
+<script>
+for (let i = 1; i <= 30; i++) {
+    document.write(`
+        <div class="card">
+            <img src="fondos/fondo_${i}.jpg" loading="lazy" onclick="abrirVisor(this.src)">
+        </div>
+    `);
+}
+</script>
 
 </div>
 
-<!-- VISOR -->
-<div id="visor" onclick="cerrarVisor()">
-    <img id="visorImg">
-    <button class="boton" onclick="usarFondo()">Usar como fondo</button>
+<!-- 🔥 VISOR -->
+
+<div id="visor" onclick="cerrarVisor(event)">
+    <img id="visorImg" onclick="event.stopPropagation()">
+    <div class="boton" onclick="event.stopPropagation(); usarFondo()">Usar como fondo</div>
 </div>
+
+<script>
+
+let imagenActual = "";
+
+function abrirVisor(src) {
+    imagenActual = src;
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("visorImg").src = src;
+}
+
+function cerrarVisor(e) {
+    if (e.target.id === "visor") {
+        document.getElementById("visor").style.display = "none";
+    }
+}
+
+function usarFondo() {
+    window.location.href = "app://setwallpaper?img=" + imagenActual;
+}
+
+</script>
 
 </body>
 </html>
