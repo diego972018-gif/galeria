@@ -16,6 +16,8 @@ body {
     background: #0f0f0f;
     color: white;
     text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 h1 {
@@ -40,8 +42,10 @@ h1 {
     height: 220px;
     object-fit: cover;
     cursor: pointer;
+    pointer-events: auto;
 }
 
+/* 🔥 VISOR */
 #visor {
     position: fixed;
     top: 0;
@@ -60,6 +64,7 @@ h1 {
     max-height: 70%;
 }
 
+/* 🔥 BOTÓN */
 .boton {
     margin-top: 20px;
     padding: 12px 20px;
@@ -78,13 +83,16 @@ h1 {
 
 <div class="galeria">
 
-<!-- 🔥 IMÁGENES HASTA 30 -->
-
 <script>
 for (let i = 1; i <= 30; i++) {
     document.write(`
         <div class="card">
-            <img src="fondos/fondo_${i}.jpg" loading="lazy" onclick="abrirVisor(this.src)">
+            <img 
+                src="fondos/fondo_${i}.jpg"
+                loading="lazy"
+                draggable="false"
+                oncontextmenu="return false"
+                onclick="abrirVisor(this.src)">
         </div>
     `);
 }
@@ -93,31 +101,55 @@ for (let i = 1; i <= 30; i++) {
 </div>
 
 <!-- 🔥 VISOR -->
-
 <div id="visor" onclick="cerrarVisor(event)">
-    <img id="visorImg" onclick="event.stopPropagation()">
-    <div class="boton" onclick="event.stopPropagation(); usarFondo()">Usar como fondo</div>
+    <img id="visorImg"
+         draggable="false"
+         oncontextmenu="return false"
+         onclick="event.stopPropagation()">
+
+    <div class="boton"
+         onclick="event.stopPropagation(); usarFondo()">
+        Usar como fondo
+    </div>
 </div>
 
 <script>
 
 let imagenActual = "";
 
+// 🔥 ABRIR VISOR
 function abrirVisor(src) {
     imagenActual = src;
     document.getElementById("visor").style.display = "flex";
     document.getElementById("visorImg").src = src;
 }
 
+// 🔥 CERRAR VISOR SOLO SI TOCAN FONDO
 function cerrarVisor(e) {
     if (e.target.id === "visor") {
         document.getElementById("visor").style.display = "none";
     }
 }
 
+// 🔥 ENVIAR A APP
 function usarFondo() {
     window.location.href = "app://setwallpaper?img=" + imagenActual;
 }
+
+// 🔒 BLOQUEOS EXTRA
+
+// ❌ clic derecho global
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// ❌ mantener presionado en móvil
+document.addEventListener("touchstart", function(e) {
+    if (e.target.tagName === "IMG") {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+// ❌ arrastrar imágenes
+document.addEventListener("dragstart", e => e.preventDefault());
 
 </script>
 
