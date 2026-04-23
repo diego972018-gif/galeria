@@ -7,8 +7,8 @@
 <title>Galería de Fondos</title>
 
 <!-- ⚡ PRELOAD (portadas más rápidas) -->
-<link rel="preload" as="image" href="fondos/naturaleza/fondo_1.jpg">
-<link rel="preload" as="image" href="fondos/belleza/fondo_1.jpg">
+<link rel="preload" as="image" href="https://diego972018-gif.github.io/galeria/fondos/naturaleza/fondo_1.jpg">
+<link rel="preload" as="image" href="https://diego972018-gif.github.io/galeria/fondos/belleza/fondo_1.jpg">
 
 <!-- ⚡ CACHE -->
 <meta http-equiv="Cache-Control" content="public, max-age=31536000">
@@ -96,7 +96,10 @@ h1 {
 </div>
 
 <script>
-let imagenActual = "";
+let imagenActual = ""; // Esta variable ahora siempre guardará la URL completa
+
+// ⚡ URL BASE DE LA GALERÍA WEB (MUY IMPORTANTE PARA CONSTRUIR LAS RUTAS COMPLETAS)
+const baseUrl = "https://diego972018-gif.github.io/galeria/";
 
 // 📱 DETECTAR APPS
 const ua = navigator.userAgent;
@@ -134,11 +137,15 @@ function cargarCategorias() {
     const cont = document.getElementById("contenedor");
 
     for (let c in categorias) {
-        const portada = `fondos/${c}/fondo_1.jpg`;
+        // La portada puede seguir siendo relativa para la visualización inicial de la categoría
+        const portadaRelativa = `fondos/${c}/fondo_1.jpg`;
+        // PERO, para el preload, es mejor que sea la URL completa
+        // <link rel="preload" as="image" href="https://diego972018-gif.github.io/galeria/fondos/naturaleza/fondo_1.jpg">
+        // (Esto ya se ajustó en las etiquetas <link rel="preload"> en el <head>)
 
         cont.innerHTML += `
             <div class="card">
-                <img src="${portada}" 
+                <img src="${portadaRelativa}"
                      loading="eager"
                      decoding="async"
                      onclick="abrirCategoria('${c}')">
@@ -158,7 +165,7 @@ function volver() {
     window.location.href = window.location.pathname;
 }
 
-// 🖼️ CARGAR IMÁGENES (1–20)
+// 🖼️ CARGAR IMÁGENES (1–30)
 function cargarImagenes(c) {
 
     document.getElementById("titulo").innerText = categorias[c];
@@ -166,16 +173,16 @@ function cargarImagenes(c) {
 
     const cont = document.getElementById("contenedor");
 
-    for (let i = 1; i <= 20; i++) {
-
-        const ruta = `fondos/${c}/fondo_${i}.jpg`;
+    for (let i = 1; i <= 30; i++) { // *** MODIFICADO DE 20 A 30 ***
+        const rutaRelativa = `fondos/${c}/fondo_${i}.jpg`;
+        const rutaCompleta = new URL(rutaRelativa, baseUrl).href; // Construye la URL completa
 
         cont.innerHTML += `
             <div class="card">
-                <img src="${ruta}"
+                <img src="${rutaCompleta}" // Usamos la URL completa para src
                      loading="lazy"
                      decoding="async"
-                     onclick="abrirVisor('${ruta}')"
+                     onclick="abrirVisor('${rutaCompleta}')" // Pasamos la URL completa al visor
                      onerror="this.style.display='none'">
             </div>
         `;
@@ -183,10 +190,11 @@ function cargarImagenes(c) {
 }
 
 // 🔍 VISOR
-function abrirVisor(src) {
-    imagenActual = src;
+function abrirVisor(srcCompleta) {
+    // 'srcCompleta' ya debería ser la URL completa gracias a cargarImagenes
+    imagenActual = srcCompleta; // Guarda la URL completa
     document.getElementById("visor").style.display = "flex";
-    document.getElementById("visorImg").src = src;
+    document.getElementById("visorImg").src = srcCompleta; // El visor carga la URL completa
 }
 
 function cerrarVisor(e) {
@@ -197,6 +205,7 @@ function cerrarVisor(e) {
 
 // 📲 ENVIAR A APP
 function usarFondo() {
+    // 'imagenActual' ya contiene la URL completa y está lista para ser enviada
     window.location.href = "app://setwallpaper?img=" + encodeURIComponent(imagenActual);
 }
 </script>
