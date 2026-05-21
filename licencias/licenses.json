@@ -1,1 +1,117 @@
 
+{
+  "version": 1,
+
+  "apps": {
+
+    "lectoscan": {
+      "codigos": [
+
+        {
+          "codigo": "LECTO-A7X9P2K1",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-B8Q2L5N4",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-C3M7V8R1",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-D9T1X6P5",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-E4Z8K2W7",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+
+
+        {
+          "codigo": "LECTO-F6P9M3A2",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-G1X4Q7L9",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-H8W2N5T3",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-J7R3K1V6",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-K5M8P2X4",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        },
+
+
+
+        {
+          "codigo": "LECTO-PERM-9X7A2K5M",
+          "estado": "disponible",
+          "duracion": -1,
+          "tipo": "permanente"
+        }
+
+      ]
+    },
+
+
+
+    "traduvoz": {
+      "codigos": [
+
+        {
+          "codigo": "TRADU-A2P8X5M1",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "TRADU-B7L4Q9K3",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        }
+
+      ]
+    }
+
+  }
+}
