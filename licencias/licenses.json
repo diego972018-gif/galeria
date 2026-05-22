@@ -154,7 +154,15 @@
           "tipo": "permanente",
           "usos_actuales": 0,
           "usos_permitidos": 10
-        }
+        },
+        {
+          "codigo": "LECTO-Diego.Mio",
+          "estado": "disponible",
+          "duracion": -1,
+          "tipo": "permanente",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
+         }
       ]
     }
   },
