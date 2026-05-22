@@ -1,10 +1,10 @@
-
 {
   "version": 1,
 
   "apps": {
 
     "lectoscan": {
+
       "codigos": [
 
         {
@@ -37,6 +37,27 @@
 
         {
           "codigo": "LECTO-E4Z8K2W7",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-L2V8M4Q7",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-M5X1T9K3",
+          "estado": "disponible",
+          "duracion": 90,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-N7P4A8W2",
           "estado": "disponible",
           "duracion": 90,
           "tipo": "premium"
@@ -79,6 +100,27 @@
           "tipo": "premium"
         },
 
+        {
+          "codigo": "LECTO-Q4N8Z1P6",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-R2K7M5X9",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        },
+
+        {
+          "codigo": "LECTO-S9V3L1T4",
+          "estado": "disponible",
+          "duracion": 180,
+          "tipo": "premium"
+        },
+
 
 
         {
@@ -86,32 +128,24 @@
           "estado": "disponible",
           "duracion": -1,
           "tipo": "permanente"
-        }
-
-      ]
-    },
-
-
-
-    "traduvoz": {
-      "codigos": [
-
-        {
-          "codigo": "TRADU-A2P8X5M1",
-          "estado": "disponible",
-          "duracion": 90,
-          "tipo": "premium"
         },
 
         {
-          "codigo": "TRADU-B7L4Q9K3",
+          "codigo": "LECTO-PERM-4L8Q7W2X",
           "estado": "disponible",
-          "duracion": 180,
-          "tipo": "premium"
+          "duracion": -1,
+          "tipo": "permanente"
+        },
+
+        {
+          "codigo": "LECTO-PERM-8M2T5K9P",
+          "estado": "disponible",
+          "duracion": -1,
+          "tipo": "permanente"
         }
 
       ]
     }
 
   }
-}
+        }
