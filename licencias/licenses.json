@@ -1,151 +1,162 @@
 {
   "version": 1,
-
   "apps": {
-
     "lectoscan": {
-
       "codigos": [
-
         {
           "codigo": "LECTO-A7X9P2K1",
           "estado": "disponible",
           "duracion": 90,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-B8Q2L5N4",
           "estado": "disponible",
           "duracion": 90,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-C3M7V8R1",
           "estado": "disponible",
           "duracion": 90,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-D9T1X6P5",
           "estado": "disponible",
           "duracion": 90,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-E4Z8K2W7",
           "estado": "disponible",
           "duracion": 90,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-L2V8M4Q7",
           "estado": "disponible",
           "duracion": 90,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-M5X1T9K3",
           "estado": "disponible",
           "duracion": 90,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-N7P4A8W2",
           "estado": "disponible",
           "duracion": 90,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
-
-
         {
           "codigo": "LECTO-F6P9M3A2",
           "estado": "disponible",
           "duracion": 180,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-G1X4Q7L9",
           "estado": "disponible",
           "duracion": 180,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-H8W2N5T3",
           "estado": "disponible",
           "duracion": 180,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-J7R3K1V6",
           "estado": "disponible",
           "duracion": 180,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-K5M8P2X4",
           "estado": "disponible",
           "duracion": 180,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-Q4N8Z1P6",
           "estado": "disponible",
           "duracion": 180,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-R2K7M5X9",
           "estado": "disponible",
           "duracion": 180,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-S9V3L1T4",
           "estado": "disponible",
           "duracion": 180,
-          "tipo": "premium"
+          "tipo": "premium",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
-
-
         {
           "codigo": "LECTO-PERM-9X7A2K5M",
           "estado": "disponible",
           "duracion": -1,
-          "tipo": "permanente"
+          "tipo": "permanente",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-PERM-4L8Q7W2X",
           "estado": "disponible",
           "duracion": -1,
-          "tipo": "permanente"
+          "tipo": "permanente",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         },
-
         {
           "codigo": "LECTO-PERM-8M2T5K9P",
           "estado": "disponible",
           "duracion": -1,
-          "tipo": "permanente"
+          "tipo": "permanente",
+          "usos_actuales": 0,
+          "usos_permitidos": 10
         }
-
       ]
     }
-
-  }
-        }
+  },
+  "dispositivos_registrados": {}
+}
