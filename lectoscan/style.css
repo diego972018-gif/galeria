@@ -1,1 +1,199 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
+body{
+  background:#050510;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* FONDO */
+
+body::before{
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:
+  radial-gradient(circle at top left,#6a00ff55,transparent 40%),
+  radial-gradient(circle at bottom right,#00aaff33,transparent 40%),
+  linear-gradient(135deg,#050510,#0b0b2e,#12002e);
+  z-index:-2;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image:
+  linear-gradient(#ffffff08 1px,transparent 1px),
+  linear-gradient(90deg,#ffffff08 1px,transparent 1px);
+  background-size:40px 40px;
+  z-index:-1;
+  opacity:0.3;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+}
+
+.hero img{
+  width:320px;
+  max-width:90%;
+  border-radius:30px;
+  box-shadow:
+  0 0 25px #7b2cff,
+  0 0 60px #4d00ff;
+  margin-bottom:30px;
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-12px);}
+  100%{transform:translateY(0px);}
+}
+
+h1{
+  font-size:4rem;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#ffffff,#a855f7,#38bdf8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.sub{
+  font-size:1.4rem;
+  max-width:700px;
+  line-height:1.6;
+  color:#d6d6ff;
+  margin-bottom:40px;
+}
+
+/* BOTON */
+
+.download-btn{
+  display:inline-block;
+  padding:18px 45px;
+  border-radius:18px;
+  text-decoration:none;
+  color:white;
+  font-size:1.2rem;
+  font-weight:bold;
+  background:linear-gradient(90deg,#7b2cff,#00aaff);
+  box-shadow:
+  0 0 15px #7b2cff,
+  0 0 40px #00aaff;
+  transition:0.3s;
+}
+
+.download-btn:hover{
+  transform:scale(1.08);
+}
+
+.section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  font-size:2.5rem;
+  margin-bottom:60px;
+  color:#c084fc;
+}
+
+/* TARJETAS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  padding:30px;
+  border-radius:25px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:
+  0 0 20px #7b2cff,
+  0 0 40px #00aaff55;
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#8be9fd;
+}
+
+.card p{
+  color:#ddd;
+  line-height:1.6;
+}
+
+/* GALERIA */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:25px;
+  transition:0.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.04);
+  box-shadow:
+  0 0 25px #7b2cff,
+  0 0 50px #00aaff;
+}
+
+.final-download{
+  text-align:center;
+}
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  color:#aaa;
+}
+
+@media(max-width:768px){
+
+  h1{
+    font-size:2.8rem;
+  }
+
+  .sub{
+    font-size:1.1rem;
+  }
+
+  .hero img{
+    width:260px;
+  }
+
+  }
