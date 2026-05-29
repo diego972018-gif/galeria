@@ -196,4 +196,139 @@ footer{
     width:260px;
   }
 
+}
+
+/* CONTENEDOR VIDEOS */
+
+.video-slider{
+
+  display:flex;
+  gap:25px;
+
+  overflow-x:auto;
+
+  padding:20px;
+
+  scroll-behavior:smooth;
+
+}
+
+/* VIDEO */
+
+.video-slider video{
+
+  width:320px;
+
+  border-radius:25px;
+
+  flex-shrink:0;
+
+  background:#000;
+
+  box-shadow:
+  0 0 20px #7b2cff,
+  0 0 40px #00aaff55;
+
+  transition:0.4s;
+
+}
+
+/* EFECTO HOVER VIDEO */
+
+.video-slider video:hover{
+
+  transform:scale(1.03);
+
+  box-shadow:
+  0 0 30px #7b2cff,
+  0 0 60px #00aaff;
+
+}
+
+/* SCROLL PERSONALIZADO */
+
+.video-slider::-webkit-scrollbar{
+
+  height:10px;
+
+}
+
+.video-slider::-webkit-scrollbar-thumb{
+
+  background:#7b2cff;
+
+  border-radius:20px;
+
+}
+
+.image-slider{
+
+  display:flex;
+
+  gap:25px;
+
+  overflow-x:auto;
+
+  padding:20px;
+
+  scroll-behavior:smooth;
+
+}
+
+/* IMAGENES */
+
+.image-slider img{
+
+  width:300px;
+
+  border-radius:25px;
+
+  flex-shrink:0;
+
+  transition:0.4s;
+
+  box-shadow:
+  0 0 20px #7b2cff55;
+
+}
+
+
+.image-slider img:hover{
+
+  transform:scale(1.05);
+
+  box-shadow:
+  0 0 25px #7b2cff,
+  0 0 50px #00aaff;
+
+}
+
+.image-slider::-webkit-scrollbar{
+
+  height:10px;
+
+}
+
+.image-slider::-webkit-scrollbar-thumb{
+
+  background:#00aaff;
+
+  border-radius:20px;
+
+}
+
+@media(max-width:768px){
+
+  .video-slider video{
+
+    width:260px;
+
   }
+
+  .image-slider img{
+
+    width:240px;
+
+  }
+
+}
