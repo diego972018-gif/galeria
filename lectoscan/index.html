@@ -1,4 +1,3 @@
-<h1>LectoScan</h1>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,15 +8,11 @@
 
   <title>LectoScan</title>
 
-  <!-- CSS -->
-
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
-  <!-- HERO -->
 
   <section class="hero">
 
@@ -39,8 +34,6 @@
     </a>
 
   </section>
-
-  <!-- FUNCIONES -->
 
   <section class="section">
 
@@ -96,53 +89,47 @@
 
   </section>
 
-  <!-- VIDEOS -->
+  <section class="section">
 
-<section class="section">
+    <h2 class="title">
+      Experiencia LectoScan
+    </h2>
 
-  <h2 class="title">
-    Experiencia LectoScan
-  </h2>
+    <div class="video-slider">
 
-  <div class="video-slider">
+      <video controls muted loop playsinline>
+        <source src="video/video1.mp4" type="video/mp4">
+      </video>
 
-    <video controls autoplay muted loop>
-      <source src="videos/video1.mp4" type="video/mp4">
-    </video>
+      <video controls muted loop playsinline>
+        <source src="video/video2.mp4" type="video/mp4">
+      </video>
 
-    <video controls autoplay muted loop>
-      <source src="videos/video2.mp4" type="video/mp4">
-    </video>
+      <video controls muted loop playsinline>
+        <source src="video/video3.mp4" type="video/mp4">
+      </video>
 
-    <video controls autoplay muted loop>
-      <source src="videos/video3.mp4" type="video/mp4">
-    </video>
+    </div>
 
-  </div>
+  </section>
 
-</section>
+  <section class="section">
 
-<!-- SLIDER DE IMAGENES -->
+    <h2 class="title">
+      Momentos LectoScan
+    </h2>
 
-<section class="section">
+    <div class="gallery">
 
-  <h2 class="title">
-    Momentos LectoScan
-  </h2>
+      <img src="img/app1.jpg" alt="">
+      <img src="img/app2.jpg" alt="">
+      <img src="img/app3.jpg" alt="">
+      <img src="img/app4.jpg" alt="">
+      <img src="img/portada.jpg" alt="">
 
-  <div class="image-slider">
+    </div>
 
-    <img src="img/app1.jpg">
-    <img src="img/app2.jpg">
-    <img src="img/app3.jpg">
-    <img src="img/app4.jpg">
-    <img src="img/portada.jpg">
-
-  </div>
-
-</section>
-
-  <!-- DESCARGA FINAL -->
+  </section>
 
   <section class="section final-download">
 
@@ -150,11 +137,11 @@
       Descarga LectoScan
     </h2>
 
-  <a class="download-btn"
-  href="https://drive.google.com/uc?export=download&id=1HIJDrBGkzYSv6-VTN5sdscYHoPHf7mm3"
-  target="_blank">
-  DESCARGAR AHORA
-  </a>
+    <a class="download-btn"
+      href="https://drive.google.com/uc?export=download&id=1HIJDrBGkzYSv6-VTN5sdscYHoPHf7mm3"
+      target="_blank">
+      DESCARGAR AHORA
+    </a>
 
   </section>
 
@@ -162,9 +149,16 @@
     LectoScan © 2026 • Futuro de la lectura inteligente
   </footer>
 
-  <!-- SCRIPT -->
+  <div id="imageViewer" class="image-viewer">
+
+    <span class="close-viewer">&times;</span>
+
+    <img id="viewerImg" src="">
+
+  </div>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
