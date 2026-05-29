@@ -21,3 +21,50 @@ window.addEventListener("scroll", () => {
   });
 
 });
+
+
+const galleryImages =
+document.querySelectorAll(".gallery img");
+
+const viewer =
+document.getElementById("imageViewer");
+
+const viewerImg =
+document.getElementById("viewerImg");
+
+const closeViewer =
+document.querySelector(".close-viewer");
+
+// ABRIR IMAGEN
+
+galleryImages.forEach(img => {
+
+  img.addEventListener("click", () => {
+
+    viewer.classList.add("active");
+
+    viewerImg.src = img.src;
+
+  });
+
+});
+
+// CERRAR CON X
+
+closeViewer.addEventListener("click", () => {
+
+  viewer.classList.remove("active");
+
+});
+
+// CERRAR TOCANDO FONDO
+
+viewer.addEventListener("click", (e) => {
+
+  if(e.target !== viewerImg){
+
+    viewer.classList.remove("active");
+
+  }
+
+});
