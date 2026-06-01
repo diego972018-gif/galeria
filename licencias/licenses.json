@@ -1,170 +1,211 @@
 {
   "version": 1,
+  "ultima_actualizacion": "2026-06-01T11:03:12",
   "apps": {
     "lectoscan": {
+      "descripcion": "Base de datos de códigos de activación",
       "codigos": [
         {
           "codigo": "LECTO-A7X9P2K1",
           "estado": "disponible",
-          "duracion": 90,
+          "duracion_dias": 90,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-B8Q2L5N4",
           "estado": "disponible",
-          "duracion": 90,
+          "duracion_dias": 90,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-C3M7V8R1",
           "estado": "disponible",
-          "duracion": 90,
+          "duracion_dias": 90,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-D9T1X6P5",
           "estado": "disponible",
-          "duracion": 90,
+          "duracion_dias": 90,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-E4Z8K2W7",
           "estado": "disponible",
-          "duracion": 90,
+          "duracion_dias": 90,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-L2V8M4Q7",
           "estado": "disponible",
-          "duracion": 90,
+          "duracion_dias": 90,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-M5X1T9K3",
           "estado": "disponible",
-          "duracion": 90,
+          "duracion_dias": 90,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-N7P4A8W2",
           "estado": "disponible",
-          "duracion": 90,
+          "duracion_dias": 90,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-F6P9M3A2",
           "estado": "disponible",
-          "duracion": 180,
+          "duracion_dias": 180,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-G1X4Q7L9",
           "estado": "disponible",
-          "duracion": 180,
+          "duracion_dias": 180,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-H8W2N5T3",
           "estado": "disponible",
-          "duracion": 180,
+          "duracion_dias": 180,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-J7R3K1V6",
           "estado": "disponible",
-          "duracion": 180,
+          "duracion_dias": 180,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-K5M8P2X4",
           "estado": "disponible",
-          "duracion": 180,
+          "duracion_dias": 180,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-Q4N8Z1P6",
           "estado": "disponible",
-          "duracion": 180,
+          "duracion_dias": 180,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-R2K7M5X9",
           "estado": "disponible",
-          "duracion": 180,
+          "duracion_dias": 180,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-S9V3L1T4",
           "estado": "disponible",
-          "duracion": 180,
+          "duracion_dias": 180,
           "tipo": "premium",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-PERM-9X7A2K5M",
           "estado": "disponible",
-          "duracion": -1,
+          "duracion_dias": -1,
           "tipo": "permanente",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-PERM-4L8Q7W2X",
           "estado": "disponible",
-          "duracion": 365,
-          "tipo": "premium",
+          "duracion_dias": 365,
+          "tipo": "premium_anual",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
           "codigo": "LECTO-PERM-8M2T5K9P",
           "estado": "disponible",
-          "duracion": -1,
+          "duracion_dias": -1,
           "tipo": "permanente",
           "usos_actuales": 0,
-          "usos_permitidos": 10
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
         },
         {
-          "codigo": "LECTO-Diego.Mio",
+          "codigo": "LECTO-DIEGO-MIO",
           "estado": "disponible",
-          "duracion": -1,
+          "duracion_dias": -1,
           "tipo": "permanente",
           "usos_actuales": 0,
-          "usos_permitidos": 10
-         }
+          "usos_permitidos": 10,
+          "fecha_activacion": null,
+          "fecha_vencimiento": null
+        }
       ]
     }
   }
-
-
+        }
