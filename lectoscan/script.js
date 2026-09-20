@@ -57,7 +57,6 @@ closeViewer.addEventListener("click", () => {
 
 });
 
-// CERRAR TOCANDO FONDO
 
 viewer.addEventListener("click", (e) => {
 
@@ -68,3 +67,33 @@ viewer.addEventListener("click", (e) => {
   }
 
 });
+function sendFeedback(){
+
+  const name = document.getElementById("feedbackName").value.trim();
+  const type = document.getElementById("feedbackType").value;
+  const message = document.getElementById("feedbackMessage").value.trim();
+
+  if(message === ""){
+    alert("Por favor escribe tu sugerencia o reporte.");
+    return;
+  }
+
+  const subject = encodeURIComponent(
+    "LectoScan - " + type
+  );
+
+  const body = encodeURIComponent(
+    "Hola Diego,\n\n" +
+    "Tipo: " + type + "\n" +
+    "Nombre: " + (name || "Usuario de LectoScan") + "\n\n" +
+    "Mensaje:\n" +
+    message +
+    "\n\nEnviado desde la plataforma LectoScan."
+  );
+
+  window.location.href =
+    "mailto:diego972018@gmail.com?subject=" +
+    subject +
+    "&body=" +
+    body;
+}
