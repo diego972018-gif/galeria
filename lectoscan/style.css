@@ -397,8 +397,112 @@ footer{
   0 0 30px #00aaff;
 }
 
-/* EFECTO CLICK EN IMAGEN */
-
 .gallery img{
   cursor:pointer;
 }
+.feedback-section{
+  text-align:center;
+}
+
+.feedback-text{
+  max-width:700px;
+  margin:0 auto 35px;
+  color:#d6d6ff;
+  line-height:1.7;
+  font-size:1.1rem;
+}
+
+.feedback-box{
+  max-width:650px;
+  margin:auto;
+  padding:30px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(168,85,247,0.35);
+  backdrop-filter:blur(12px);
+  box-shadow:
+  0 0 20px #7b2cff55,
+  0 0 45px #00aaff22;
+}
+
+.feedback-box input,
+.feedback-box select,
+.feedback-box textarea{
+  width:100%;
+  padding:16px;
+  margin-bottom:18px;
+  border-radius:15px;
+  border:1px solid #7b2cff88;
+  background:#08081c;
+  color:white;
+  font-size:1rem;
+  outline:none;
+}
+
+.feedback-box input:focus,
+.feedback-box select:focus,
+.feedback-box textarea:focus{
+  border-color:#00aaff;
+  box-shadow:0 0 15px #7b2cff55;
+}
+
+.feedback-box textarea{
+  min-height:150px;
+  resize:vertical;
+}
+
+.feedback-box select option{
+  background:#08081c;
+  color:white;
+}
+
+.feedback-btn{
+  width:100%;
+  padding:17px;
+  border:none;
+  border-radius:16px;
+  color:white;
+  font-size:1rem;
+  font-weight:bold;
+  cursor:pointer;
+  background:linear-gradient(90deg,#7b2cff,#00aaff);
+  box-shadow:
+  0 0 15px #7b2cff,
+  0 0 35px #00aaff55;
+  transition:0.3s;
+}
+
+.feedback-btn:hover{
+  transform:scale(1.03);
+}
+
+.contact-card{
+  max-width:650px;
+  margin:30px auto 0;
+  padding:25px;
+  border-radius:22px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(0,170,255,0.25);
+}
+
+.contact-card h3{
+  color:#8be9fd;
+  margin-bottom:10px;
+}
+
+.contact-card p{
+  color:#ccc;
+  margin-bottom:10px;
+}
+
+.contact-card a{
+  color:#c084fc;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:1.05rem;
+}
+
+.contact-card a:hover{
+  color:#38bdf8;
+  text-shadow:0 0 12px #7b2cff;
+  }
