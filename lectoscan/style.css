@@ -11,8 +11,6 @@ body{
   overflow-x:hidden;
 }
 
-/* FONDO */
-
 body::before{
   content:"";
   position:fixed;
@@ -38,8 +36,6 @@ body::after{
   opacity:0.3;
 }
 
-/* HERO */
-
 .hero{
   min-height:100vh;
   display:flex;
@@ -62,15 +58,28 @@ body::after{
 }
 
 @keyframes float{
-  0%{transform:translateY(0px);}
-  50%{transform:translateY(-12px);}
-  100%{transform:translateY(0px);}
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
 }
 
 h1{
   font-size:4rem;
   margin-bottom:10px;
-  background:linear-gradient(90deg,#ffffff,#a855f7,#38bdf8);
+  background:linear-gradient(
+    90deg,
+    #ffffff,
+    #a855f7,
+    #38bdf8
+  );
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -83,8 +92,6 @@ h1{
   margin-bottom:40px;
 }
 
-/* BOTON */
-
 .download-btn{
   display:inline-block;
   padding:18px 45px;
@@ -93,7 +100,11 @@ h1{
   color:white;
   font-size:1.2rem;
   font-weight:bold;
-  background:linear-gradient(90deg,#7b2cff,#00aaff);
+  background:linear-gradient(
+    90deg,
+    #7b2cff,
+    #00aaff
+  );
   box-shadow:
   0 0 15px #7b2cff,
   0 0 40px #00aaff;
@@ -117,11 +128,10 @@ h1{
   color:#c084fc;
 }
 
-/* TARJETAS */
-
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
   gap:25px;
 }
 
@@ -151,11 +161,10 @@ h1{
   line-height:1.6;
 }
 
-/* GALERIA */
-
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
   gap:25px;
 }
 
@@ -163,6 +172,7 @@ h1{
   width:100%;
   border-radius:25px;
   transition:0.4s;
+  cursor:pointer;
 }
 
 .gallery img:hover{
@@ -176,166 +186,196 @@ h1{
   text-align:center;
 }
 
-footer{
+/* DESCARGAS */
+
+.download-options{
+  width:100%;
+  max-width:800px;
+  margin:35px auto 0;
+  padding:30px;
+  border-radius:28px;
+  background:
+  linear-gradient(
+    145deg,
+    rgba(123,44,255,0.12),
+    rgba(0,170,255,0.08)
+  );
+  border:1px solid rgba(168,85,247,0.35);
+  backdrop-filter:blur(15px);
+  box-shadow:
+  0 0 25px #7b2cff33,
+  0 0 55px #00aaff18;
+}
+
+.download-label{
   text-align:center;
-  padding:50px 20px;
-  color:#aaa;
+  font-size:1.4rem;
+  font-weight:bold;
+  letter-spacing:1px;
+  color:#ffffff;
+  margin-bottom:22px;
+  text-shadow:
+  0 0 10px #7b2cff,
+  0 0 20px #00aaff;
 }
 
-@media(max-width:768px){
-
-  h1{
-    font-size:2.8rem;
-  }
-
-  .sub{
-    font-size:1.1rem;
-  }
-
-  .hero img{
-    width:260px;
-  }
-
+.download-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+  gap:20px;
 }
 
-/* CONTENEDOR VIDEOS */
+.download-buttons .download-btn{
+  flex:1;
+  min-width:220px;
+  padding:18px 25px;
+  text-align:center;
+  font-size:1.05rem;
+  border:1px solid transparent;
+}
+
+.mega-download{
+  background:
+  linear-gradient(
+    135deg,
+    #20c56b,
+    #0a8f50
+  );
+
+  box-shadow:
+  0 0 15px #20c56b88,
+  0 0 35px #20c56b44;
+}
+
+.mega-download:hover{
+  background:
+  linear-gradient(
+    135deg,
+    #27e77d,
+    #0aa85c
+  );
+
+  box-shadow:
+  0 0 20px #20c56b,
+  0 0 45px #20c56b88;
+}
+
+.drive-download{
+  background:
+  linear-gradient(
+    135deg,
+    #4285f4,
+    #2864c7
+  );
+
+  box-shadow:
+  0 0 15px #4285f488,
+  0 0 35px #4285f444;
+}
+
+.drive-download:hover{
+  background:
+  linear-gradient(
+    135deg,
+    #5a98ff,
+    #3475df
+  );
+
+  box-shadow:
+  0 0 20px #4285f4,
+  0 0 45px #4285f488;
+}
+
+.download-info{
+  text-align:center;
+  margin-top:20px;
+  color:#cfd0ff;
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
+/* VIDEOS */
 
 .video-slider{
-
   display:flex;
   gap:25px;
-
   overflow-x:auto;
-
   padding:20px;
-
   scroll-behavior:smooth;
-
 }
 
-/* VIDEO */
-
 .video-slider video{
-
   width:320px;
-
   border-radius:25px;
-
   flex-shrink:0;
-
   background:#000;
-
   box-shadow:
   0 0 20px #7b2cff,
   0 0 40px #00aaff55;
-
   transition:0.4s;
-
 }
 
-/* EFECTO HOVER VIDEO */
-
 .video-slider video:hover{
-
   transform:scale(1.03);
-
   box-shadow:
   0 0 30px #7b2cff,
   0 0 60px #00aaff;
-
 }
 
-/* SCROLL PERSONALIZADO */
-
 .video-slider::-webkit-scrollbar{
-
   height:10px;
-
 }
 
 .video-slider::-webkit-scrollbar-thumb{
-
   background:#7b2cff;
-
   border-radius:20px;
-
 }
+
+.video-slider::-webkit-scrollbar-track{
+  background:#ffffff08;
+}
+
+/* IMAGE SLIDER */
 
 .image-slider{
-
   display:flex;
-
   gap:25px;
-
   overflow-x:auto;
-
   padding:20px;
-
   scroll-behavior:smooth;
-
 }
-
-/* IMAGENES */
 
 .image-slider img{
-
   width:300px;
-
   border-radius:25px;
-
   flex-shrink:0;
-
   transition:0.4s;
-
   box-shadow:
   0 0 20px #7b2cff55;
-
 }
 
-
 .image-slider img:hover{
-
   transform:scale(1.05);
-
   box-shadow:
   0 0 25px #7b2cff,
   0 0 50px #00aaff;
-
 }
 
 .image-slider::-webkit-scrollbar{
-
   height:10px;
-
 }
 
 .image-slider::-webkit-scrollbar-thumb{
-
   background:#00aaff;
-
   border-radius:20px;
-
 }
 
-@media(max-width:768px){
-
-  .video-slider video{
-
-    width:260px;
-
-  }
-
-  .image-slider img{
-
-    width:240px;
-
-  }
-
+.image-slider::-webkit-scrollbar-track{
+  background:#ffffff08;
 }
 
-/* =========================
-   VISOR FUTURISTA IMAGENES
-========================= */
+/* VISOR DE IMAGEN */
 
 .image-viewer{
   position:fixed;
@@ -348,7 +388,6 @@ footer{
   justify-content:center;
   align-items:center;
   z-index:9999;
-
   opacity:0;
   visibility:hidden;
   transition:0.4s;
@@ -364,11 +403,9 @@ footer{
   max-width:92%;
   max-height:92%;
   border-radius:25px;
-
   box-shadow:
   0 0 30px #7b2cff,
   0 0 70px #00aaff;
-
   animation:zoomIn 0.4s ease;
 }
 
@@ -391,15 +428,13 @@ footer{
   font-size:3rem;
   color:white;
   cursor:pointer;
-
   text-shadow:
   0 0 15px #7b2cff,
   0 0 30px #00aaff;
 }
 
-.gallery img{
-  cursor:pointer;
-}
+/* OPINIONES */
+
 .feedback-section{
   text-align:center;
 }
@@ -465,7 +500,12 @@ footer{
   font-size:1rem;
   font-weight:bold;
   cursor:pointer;
-  background:linear-gradient(90deg,#7b2cff,#00aaff);
+  background:
+  linear-gradient(
+    90deg,
+    #7b2cff,
+    #00aaff
+  );
   box-shadow:
   0 0 15px #7b2cff,
   0 0 35px #00aaff55;
@@ -505,4 +545,89 @@ footer{
 .contact-card a:hover{
   color:#38bdf8;
   text-shadow:0 0 12px #7b2cff;
+}
+
+/* PIE */
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  color:#aaa;
+}
+
+/* MOVIL */
+
+@media(max-width:768px){
+
+  h1{
+    font-size:2.8rem;
   }
+
+  .sub{
+    font-size:1.1rem;
+  }
+
+  .hero img{
+    width:260px;
+  }
+
+  .section{
+    padding:60px 15px;
+  }
+
+  .title{
+    font-size:2rem;
+    margin-bottom:40px;
+  }
+
+  .video-slider{
+    padding:15px 5px;
+  }
+
+  .video-slider video{
+    width:260px;
+  }
+
+  .image-slider{
+    padding:15px 5px;
+  }
+
+  .image-slider img{
+    width:240px;
+  }
+
+  .download-options{
+    padding:25px 18px;
+    margin-top:25px;
+  }
+
+  .download-buttons{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .download-buttons .download-btn{
+    width:100%;
+    min-width:0;
+    padding:17px 15px;
+  }
+
+  .download-label{
+    font-size:1.2rem;
+  }
+
+  .download-info{
+    font-size:0.9rem;
+  }
+
+  .feedback-box{
+    padding:22px 18px;
+  }
+
+  .close-viewer{
+    top:15px;
+    right:20px;
+    font-size:2.5rem;
+  }
+
+}
